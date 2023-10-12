@@ -1,41 +1,58 @@
-/* Reset some default styles */
-body {
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Reset some default styles */
+    body {
+      margin: 0;
+      padding: 0;
+    }
 
-/* Style the footer */
-footer {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-}
+    /* Style the footer */
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
 
-/* Style each footer column */
-.footer-column {
-  flex: 1;
-  padding: 10px;
-}
+    /* Style each footer column */
+    .footer-column {
+      flex: 1;
+      padding: 10px;
+    }
 
-/* Style the logo column */
-.logo-column {
-  flex-basis: 150px; /* Set a specific width for the logo column */
-}
+    /* Style the logo column */
+    .logo-column {
+      flex-basis: 150px; /* Set a specific width for the logo column */
+    }
 
-/* Make the image responsive */
-.logo-column img {
-  max-width: 100%;
-  height: auto;
-}
+    /* Make the image responsive */
+    .logo-column img {
+      max-width: 100%;
+      height: auto;
+    }
 
-/* Media query for responsiveness */
-@media (max-width: 768px) {
-  footer {
-    flex-direction: column;
-  }
-  .logo-column {
-    flex-basis: 100%; /* Full width for the logo column on smaller screens */
-  }
-}
+    /* Media query for responsiveness */
+    @media (max-width: 768px) {
+      footer {
+        flex-direction: column;
+      }
+      .logo-column {
+        flex-basis: 100%; /* Full width for the logo column on smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <footer>
+    <div class="footer-column">Column 1</div>
+    <div class="footer-column">Column 2</div>
+    <div class="footer-column">Column 3</div>
+    <div class="footer-column logo-column">
+      <img src="logo.png" alt="Logo">
+    </div>
+  </footer>
+</body>
+</html>
