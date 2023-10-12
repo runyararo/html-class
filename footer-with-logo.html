@@ -1,77 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports Great</title>
-    <style>
-        /* Reset some default styles for the body */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+/* Reset some default styles */
+body {
+  margin: 0;
+  padding: 0;
+}
 
-        /* Style the header element */
-        header {
-            background-color: #333;
-            color: #fff;
-            display: flex; /* Use Flexbox for layout */
-            justify-content: space-between; /* Space between logo and navigation */
-            align-items: center; /* Vertically align items in the center */
-            padding: 10px 20px; /* Add padding for spacing */
-        }
+/* Style the footer */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
 
-        /* Style the logo */
-        #logo img {
-            max-width: 100px; /* Set a maximum width for the logo image */
-        }
+/* Style each footer column */
+.footer-column {
+  flex: 1;
+  padding: 10px;
+}
 
-        /* Style the navigation list */
-        nav ul {
-            list-style: none;
-            display: flex; /* Display navigation items in a row */
-        }
+/* Style the logo column */
+.logo-column {
+  flex-basis: 150px; /* Set a specific width for the logo column */
+}
 
-        /* Style individual navigation items */
-        nav li {
-            margin: 0 10px; /* Add margin for spacing between items */
-        }
+/* Make the image responsive */
+.logo-column img {
+  max-width: 100%;
+  height: auto;
+}
 
-
-      
-        /* Style links within navigation items */
-        a {
-            text-decoration: none; /* Remove underlines from links */
-            color: #fff; /* Set the text color to white */
-        }
-
-        /* Media query for screens with a maximum width of 768px */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column; /* Stack items vertically */
-                align-items: center; /* Center items vertically */
-                text-align: center; /* Center text within the header */
-            }
-
-            nav {
-                margin-top: 10px; /* Add space between logo and navigation on smaller screens */
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div id="logo"><img src="logo.png" alt="Sports Great Logo"></div> <!-- Place the logo image on the left -->
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li> <!-- Navigation item: Home -->
-                <li><a href="#">History</a></li> <!-- Navigation item: History -->
-                <li><a href="#">Downloads</a></li> <!-- Navigation item: Downloads -->
-                <li><a href="#">Contact</a></li> <!-- Navigation item: Contact -->
-            </ul>
-        </nav>
-    </header>
-</body>
-</html>
-
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+  .logo-column {
+    flex-basis: 100%; /* Full width for the logo column on smaller screens */
+  }
+}
